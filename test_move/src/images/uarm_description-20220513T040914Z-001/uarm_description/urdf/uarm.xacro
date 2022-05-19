@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<robot name="uarm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find uarm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find uarm_description)/urdf/uarm.trans" />
+<xacro:include filename="$(find uarm_description)/urdf/uarm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0004039060931167339 -6.407971053725091e-18 0.024487705073211408" rpy="0 0 0"/>
+    <mass value="1.3927055360150078"/>
+    <inertia ixx="0.000723" iyy="0.000744" izz="0.000833" ixy="0.0" iyz="0.0" ixz="-1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque229234237"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="UArm-V3.3-04-forearm-1_1">
+  <inertial>
+    <origin xyz="0.0038122881537523967 -0.017591531025747287 -0.033502698835065736" rpy="0 0 0"/>
+    <mass value="1.9772613795452973"/>
+    <inertia ixx="0.001476" iyy="0.001346" izz="0.001152" ixy="3.2e-05" iyz="-0.00015" ixz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.182792 0.335124 -0.17366" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-forearm-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque229234237"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.182792 0.335124 -0.17366" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-forearm-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="UArm-V3.3-04-forearm-2_1">
+  <inertial>
+    <origin xyz="-0.0012479012215353968 -0.0006215145611418449 -0.014208886064236315" rpy="0 0 0"/>
+    <mass value="0.27282683754197334"/>
+    <inertia ixx="0.000218" iyy="0.000225" izz="0.000141" ixy="-5e-06" iyz="-3.2e-05" ixz="-6.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.212576 0.344882 -0.132334" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-forearm-2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque229234237"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.212576 0.344882 -0.132334" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-forearm-2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="UArm-V3.3-04-End_joint_1">
+  <inertial>
+    <origin xyz="0.0005025196001775534 0.0002301148893134597 -0.024431277048761142" rpy="0 0 0"/>
+    <mass value="1.2583963140520196"/>
+    <inertia ixx="0.000573" iyy="0.000573" izz="0.000645" ixy="0.0" iyz="-1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.194243 0.35391 -0.08496" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-End_joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque255255255"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.194243 0.35391 -0.08496" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-End_joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="UArm-V3.3-04-Shoulder-simplified_1">
+  <inertial>
+    <origin xyz="-7.1068472140554e-05 -3.870375466439135e-05 0.02248308084889874" rpy="0 0 0"/>
+    <mass value="0.46753821545024804"/>
+    <inertia ixx="0.00047" iyy="0.000907" izz="0.001041" ixy="-0.000339" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.051" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-Shoulder-simplified_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque229234237"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.051" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-Shoulder-simplified_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="UArm-V3.3-04-Main_arm-simplified_1">
+  <inertial>
+    <origin xyz="0.08635140939645258 -0.06203573256215372 0.12123379003559859" rpy="0 0 0"/>
+    <mass value="7.870271951825073"/>
+    <inertia ixx="0.138549" iyy="0.108446" izz="0.061304" ixy="0.023549" iyz="0.063227" ixz="-0.034624"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.040383 0.022027 -0.095" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-Main_arm-simplified_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque255255255"/>
+  </visual>
+  <collision>
+    <origin xyz="0.040383 0.022027 -0.095" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-Main_arm-simplified_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="UArm-V3.3-04-Secondary_arm_1">
+  <inertial>
+    <origin xyz="0.023015493103074852 -0.10518675181143666 -0.09465420726506335" rpy="0 0 0"/>
+    <mass value="4.197386797183981"/>
+    <inertia ixx="0.029832" iyy="0.024624" izz="0.012382" ixy="0.004171" iyz="-0.012152" ixz="0.006701"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.130254 0.176151 -0.369599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-Secondary_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque202209238"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.130254 0.176151 -0.369599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uarm_description/meshes/UArm-V3.3-04-Secondary_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev4" type="continuous">
+  <origin xyz="0.052538 -0.158973 -0.195939" rpy="0 0 0"/>
+  <parent link="UArm-V3.3-04-Secondary_arm_1"/>
+  <child link="UArm-V3.3-04-forearm-1_1"/>
+  <axis xyz="0.222183 -0.407341 -0.885837"/>
+</joint>
+
+<joint name="Rev6" type="continuous">
+  <origin xyz="0.029784 -0.009758 -0.041326" rpy="0 0 0"/>
+  <parent link="UArm-V3.3-04-forearm-1_1"/>
+  <child link="UArm-V3.3-04-forearm-2_1"/>
+  <axis xyz="-0.897511 -0.440413 -0.022592"/>
+</joint>
+
+<joint name="Rev7" type="continuous">
+  <origin xyz="-0.018333 -0.009028 -0.047374" rpy="0 0 0"/>
+  <parent link="UArm-V3.3-04-forearm-2_1"/>
+  <child link="UArm-V3.3-04-End_joint_1"/>
+  <axis xyz="0.020554 0.009399 -0.999745"/>
+</joint>
+
+<joint name="Rev9" type="continuous">
+  <origin xyz="0.0 0.0 0.051" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="UArm-V3.3-04-Shoulder-simplified_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rev12" type="continuous">
+  <origin xyz="-0.040383 -0.022027 0.044" rpy="0 0 0"/>
+  <parent link="UArm-V3.3-04-Shoulder-simplified_1"/>
+  <child link="UArm-V3.3-04-Main_arm-simplified_1"/>
+  <axis xyz="0.877898 0.478847 -0.0"/>
+</joint>
+
+<joint name="Rev13" type="continuous">
+  <origin xyz="0.170637 -0.154124 0.274599" rpy="0 0 0"/>
+  <parent link="UArm-V3.3-04-Main_arm-simplified_1"/>
+  <child link="UArm-V3.3-04-Secondary_arm_1"/>
+  <axis xyz="0.877898 0.478847 -0.0"/>
+</joint>
+
+</robot>

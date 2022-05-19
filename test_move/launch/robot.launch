@@ -1,0 +1,13 @@
+<launch>    
+    <!--For running the various python nodes(ie. scripts)-->
+    <!--If adding nodes, remember to add to cmakeslist-->
+    <node name = "ros_opencvcode" pkg="test_move" type="ros_opencv.py" output = "screen"/> 
+    <node name = "test_model_code" pkg="test_move" type="test_model.py" output = "screen"/>   
+    
+    
+    <!--Uneeded scripts, used mainly for practice, but u can take a look and refer if it helps-->
+    <!--node name = "open_cvcode" pkg="test_move" type="opencv_test.py" output = "screen"/-->
+    <!--node name = "colour_filteringcode" pkg="test_move" type="colour_filtering.py" /-->
+    <!--node name = "turtlesim" pkg="turtlesim" type="turtlesim_node" /-->
+    <!--node name = "robot_node" pkg="test_move" type="robot_move.py" output = "screen"/-->
+</launch>
